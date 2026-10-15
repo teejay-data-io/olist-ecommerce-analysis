@@ -51,7 +51,7 @@ Headline numbers (delivered orders):
 | Delivered orders | 96,478 |
 | Customers | 93,358 |
 | GMV | 15,422,461.77 |
-| Average order value | 159.86 |
+| Average order value | 159.85 |
 | Average review score | 4.16 |
 | Orders delivered late | 8.1% |
 | Average delivery time | 12.5 days |
