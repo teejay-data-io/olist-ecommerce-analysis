@@ -40,7 +40,7 @@ I looked at that question through three lenses:
 
 ![Cohort retention heatmap](02_Python/retention_heatmap.png)
 
-### 3. Power BI ([03_PowerBI](03_PowerBI))
+### 3. Power BI ([03_PowerBI](03_PowerBI), file: [olist dashboard.pbix](olist%20dashboard.pbix))
 A 4-page dashboard, **Olist E-commerce Customer Insights**, with State and Month slicers:
 
 - **Customer Behaviour**: orders by month, revenue by category, GMV by state, payment method and instalments.
@@ -105,8 +105,8 @@ olist-ecommerce-analysis/
 │   ├── engagement_charts.png
 │   └── retention_heatmap.png
 ├── 03_PowerBI/
-│   ├── olist_dashboard.pbix           # 4-page dashboard
 │   └── page1-4 screenshots (.jpg)
+├── olist dashboard.pbix               # 4-page Power BI dashboard
 ├── 04_Excel/                          # Excel what-if model (in progress)
 └── README.md
 ```
