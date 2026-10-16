@@ -21,7 +21,7 @@ I looked at that question through three lenses:
 - **MySQL**: import, cleaning, data quality checks, business questions
 - **Python**: pandas, sqlalchemy, matplotlib / seaborn
 - **Power BI**: 4-page dashboard (DAX measures, calculated columns, State and Month slicers)
-- **Excel**: what-if scenarios (in progress)
+- **Excel**: what-if profit model (scenario inputs, R$ formatting)
 
 ## What I did
 
@@ -54,8 +54,12 @@ I added two calculated columns to make the visuals readable: `Review Stars` (who
 ![Engagement page](03_PowerBI/page3_engagement.jpg)
 ![Summary page](03_PowerBI/page4_summary.jpg)
 
-### 4. Excel: in progress
-A what-if model for margin and freight scenarios.
+### 4. Excel ([04_Excel](04_Excel))
+- Exported a 27-state summary from `orders_clean` (orders, customers, GMV, freight, AOV, late orders, average review) into the `State_Data` sheet and added a late-rate column.
+- Built a `What_if` sheet with three inputs: late-order cut, repeat-rate uplift and an assumed margin.
+- Outputs update live: late orders saved, extra GMV, new GMV, and profit before and after.
+- Base case (2% repeat uplift): extra GMV of about R$298.6K, new GMV of about R$15.72M.
+- The 20% margin is an assumption, not Olist data, and is labelled as such in the sheet.
 
 ## Key findings
 
@@ -107,7 +111,7 @@ olist-ecommerce-analysis/
 ├── 03_PowerBI/
 │   └── page1-4 screenshots (.jpg)
 ├── olist dashboard.pbix               # 4-page Power BI dashboard
-├── 04_Excel/                          # Excel what-if model (in progress)
+├── 04_Excel/                          # Excel what-if model (olist_what_if.xlsx)
 └── README.md
 ```
 
