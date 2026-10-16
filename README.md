@@ -20,7 +20,7 @@ I looked at that question through three lenses:
 
 - **MySQL**: import, cleaning, data quality checks, business questions
 - **Python**: pandas, sqlalchemy, matplotlib / seaborn
-- **Power BI**: dashboard (in progress)
+- **Power BI**: 4-page dashboard (DAX measures, calculated columns, State and Month slicers)
 - **Excel**: what-if scenarios (in progress)
 
 ## What I did
@@ -34,10 +34,25 @@ I looked at that question through three lenses:
 ### 2. Python ([02_Python](02_Python))
 - Connected to MySQL with sqlalchemy and pulled `orders_clean` into pandas.
 - Charted monthly orders and the link between delivery time and review score (the image above).
-- Built a monthly cohort retention analysis to see how many first-time buyers come back in later months.
+- Built a monthly cohort retention analysis to see how many first-time buyers come back in later months (heatmap below).
+- Charted review scores and repeat customers for the engagement view.
+- The MySQL password is entered at run time with `getpass`, so no credentials are stored in the notebook.
 
-### 3. Power BI: in progress
-A dashboard with one page each for Behaviour, Retention and Engagement, plus a summary page.
+![Cohort retention heatmap](02_Python/retention_heatmap.png)
+
+### 3. Power BI ([03_PowerBI](03_PowerBI))
+A 4-page dashboard, **Olist E-commerce Customer Insights**, with State and Month slicers:
+
+- **Customer Behaviour**: orders by month, revenue by category, GMV by state, payment method and instalments.
+- **Customer Retention**: repeat vs one-time customers and the cohort view.
+- **Engagement**: late rate, average review, low review rate (13.4%), orders by review score, late rate by state, reviews for on-time vs late orders, and review score by delivery days.
+- **Summary**: 6 headline KPIs and 3 recommendations.
+
+I added two calculated columns to make the visuals readable: `Review Stars` (whole-number review score) and `Delivery Status` (On-time / Late).
+
+![Customer Behaviour page](03_PowerBI/page1_customer_behaviour.jpg)
+![Engagement page](03_PowerBI/page3_engagement.jpg)
+![Summary page](03_PowerBI/page4_summary.jpg)
 
 ### 4. Excel: in progress
 A what-if model for margin and freight scenarios.
@@ -55,10 +70,11 @@ Headline numbers (delivered orders):
 | Average review score | 4.16 |
 | Orders delivered late | 8.1% |
 | Average delivery time | 12.5 days |
+| Repeat customer rate | 3.0% |
 
 **Behaviour**
 - Orders grew steadily and peaked in **November 2017 with 7,289 orders**.
-- **Credit card** made up **78.3%** of payment value.
+- **Credit card** is the main payment method, at **77.56%** of GMV.
 
 **Retention**
 - **96.88%** of customers bought only once.
@@ -84,8 +100,13 @@ olist-ecommerce-analysis/
 ├── 01_SQL/
 │   └── 01_olist_sql_analysis.sql      # import, cleaning, DQ checks, business questions, orders_clean
 ├── 02_Python/
-│   └── behaviour_charts.png           # monthly orders + review score by delivery days
-├── 03_PowerBI/                        # Power BI dashboard (in progress)
+│   ├── 02_python_cohort_retention.ipynb  # MySQL -> pandas, charts, cohort retention
+│   ├── behaviour_charts.png
+│   ├── engagement_charts.png
+│   └── retention_heatmap.png
+├── 03_PowerBI/
+│   ├── olist_dashboard.pbix           # 4-page dashboard
+│   └── page1-4 screenshots (.jpg)
 ├── 04_Excel/                          # Excel what-if model (in progress)
 └── README.md
 ```
