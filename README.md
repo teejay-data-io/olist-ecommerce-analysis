@@ -117,7 +117,7 @@ olist-ecommerce-analysis/
 
 ## About me
 
-I'm **Tajudeen Rabiu**, an accountant moving into e-commerce data analysis. My accounting background means I check the numbers before I report them, and I like turning data into decisions a business can act on.
+I'm **Tajudeen Olugbenga Rabiu**, an accountant moving into e-commerce data analysis. My accounting background means I check the numbers before I report them, and I like turning data into decisions a business can act on.
 
 - LinkedIn: [linkedin.com/in/tajudeen-rabiu-data](https://www.linkedin.com/in/tajudeen-rabiu-data)
 - Portfolio: [teejay-data-io.github.io](https://teejay-data-io.github.io/)
